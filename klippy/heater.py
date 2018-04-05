@@ -62,6 +62,7 @@ class Heater:
         # Load additional modules
         printer.try_load_module(config, "verify_heater %s" % (self.name,))
         printer.try_load_module(config, "pid_calibrate")
+        printer.try_load_module(config, "heater_calibrate")
     def set_pwm(self, read_time, value):
         if self.target_temp <= 0.:
             value = 0.
